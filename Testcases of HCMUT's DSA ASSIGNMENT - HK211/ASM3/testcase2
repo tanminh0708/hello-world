@@ -1,0 +1,16 @@
+DOUBLE 836 887
+LOOKUP o_D
+ASSIGN w oEY7g
+LOOKUP fQDAu
+END
+BEGIN
+INSERT y
+BEGIN
+CALL y()
+END
+LOOKUP y
+BEGIN
+--------------
+Output:
+Undeclared: o_D
+THIS IS THE END.
