@@ -11,3 +11,67 @@ PRINT
 Expected:
 Undeclared: y3TV6
 THIS IS THE END.
+-------------------NEW TEST----------------
+DOUBLE 537 491
+INSERT f 4
+LOOKUP f
+PRINT
+BEGIN
+END
+ASSIGN f f(127,534,f,'YGDN')
+CALL f('E6T',229,562,'3WU')
+---------------EXPECTED---------------------
+Output:
+0
+54
+54 f//0
+TypeMismatch: ASSIGN f f(127,534,f,'YGDN')
+THIS IS THE END.
+---------------NEW TEST------------------------
+QUADRATIC 66 372 738
+INSERT l2 2
+BEGIN
+END
+PRINT
+LOOKUP l2
+LOOKUP l2
+ASSIGN jrIu71 l2(l2,'pPg')
+PRINT
+LOOKUP l2
+PRINT
+------------------EXPECTED----------------
+Output:
+0
+8 l2//0
+8
+8
+TypeMismatch: ASSIGN jrIu71 l2(l2,'pPg')
+THIS IS THE END.
+-------------------NEW TEST
+LINEAR 533 888
+INSERT j 2
+INSERT jrdw
+LOOKUP jrdw
+CALL j('p9tk2',' E')
+CALL jrdw()
+CALL jrdw()
+LOOKUP jrdw
+END
+BEGIN
+LOOKUP j
+CALL jrdw()
+INSERT m9bPEQ 1
+LOOKUP si
+END
+ASSIGN j m9bPEQ(243)
+ASSIGN m9bPEQ j(jrdw,'D')
+CALL j('s',910)
+LOOKUP m9bPEQ
+LOOKUP jrdw
+------------EXPECTED
+0
+0
+93
+0
+TypeMismatch: CALL jrdw()
+THIS IS THE END.
