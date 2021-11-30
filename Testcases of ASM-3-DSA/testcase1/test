@@ -7,3 +7,7 @@ CALL zKd()
 INSERT r
 ASSIGN r zKd
 PRINT
+-------------
+Expected:
+Undeclared: y3TV6
+THIS IS THE END.
