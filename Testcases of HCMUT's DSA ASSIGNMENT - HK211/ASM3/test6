@@ -28,3 +28,13 @@ Output:
 0
 
 THIS IS THE END.
+-----------------
+DOUBLE 17 669
+PRINT
+INSERT xk6aKA 3
+ASSIGN xk6aKA zib6q0
+-------------------
+Output:
+0
+Undeclared: zib6q0
+THIS IS THE END.
