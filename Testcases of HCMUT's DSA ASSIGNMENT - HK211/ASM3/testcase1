@@ -1,0 +1,14 @@
+QUADRATIC 68 987 626
+PRINT
+BEGIN
+BEGIN
+PRINT
+BEGIN
+INSERT hfp
+ASSIGN hfp hfp
+BEGIN
+------------
+Output:
+0
+TypeCannotBeInferred: ASSIGN hfp hfp
+THIS IS THE END.
