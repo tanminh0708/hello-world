@@ -42,3 +42,93 @@ Output:
 439
 TypeMismatch: CALL b6D(507)
 THIS IS THE END.
+-----------NEW TEST
+Testcase 20:
+LINEAR 344 194
+INSERT g
+CALL g()
+PRINT
+CALL g()
+INSERT q27f 1
+BEGIN
+ASSIGN yO4 g
+CALL g()
+LOOKUP q27f
+ASSIGN g g
+CALL q27f(q27f)
+INSERT aqNCQK
+LOOKUP g
+CALL q27f('48P')
+CALL aqNCQK()
+INSERT rWHcV
+-------EXPECTED
+Output:
+0
+TypeMismatch: CALL g()
+THIS IS THE END.
+--------New test
+LINEAR 192 912
+INSERT qW2zc5 3
+PRINT
+LOOKUP qW2zc5
+BEGIN
+PRINT
+CALL qW2zc5(qW2zc5,'a',366)
+INSERT zUPPc
+INSERT l0OJAw
+END
+END
+END
+CALL zUPPc()
+END
+----------EXPECTED
+Output:
+0
+83 qW2zc5//0
+83
+83 qW2zc5//0
+TypeMismatch: CALL qW2zc5(qW2zc5,'a',366)
+THIS IS THE END.
+-----------new test
+DOUBLE 715 985
+CALL zMfw
+PRINT
+-------EXPECTED
+Output:
+Invalid: CALL zMfw
+THIS IS THE END.
+--------nEW TEST
+Testcase 999:
+DOUBLE 371 127
+INSERT lJ9
+BEGIN
+BEGIN
+END
+END
+END
+CALL lJ9()
+ASSIGN lJ9 lJ9
+--------EXPECTED
+Output:
+0
+UnknownBlock
+THIS IS THE END.
+---------NEW TEST
+Testcase 633:
+LINEAR 740 278
+INSERT v
+LOOKUP v
+LOOKUP v
+INSERT zOz8 2
+CALL zOz8('5bH','Am')
+ASSIGN zOz8 zOz8('f',23)
+ASSIGN zOz8 zOz8(366,v)
+----------EXPECTED
+Output:
+0
+70
+70
+0
+0
+TypeMismatch: ASSIGN zOz8 zOz8('f',23)
+THIS IS THE END.
