@@ -1,0 +1,20 @@
+QUADRATIC 56 896 92
+INSERT fn 4
+BEGIN
+CALL fn('my',344,'AmV',960)
+INSERT xP 1
+PRINT
+INSERT ypKt 3
+LOOKUP ypKt
+PRINT
+BEGIN
+INSERT cBcGtP
+CALL xP(23)
+LOOKUP ypKt
+INSERT tEDoEX 3
+-----------------
+Output:
+0
+0
+InvalidDeclaration: xP
+THIS IS THE END.
