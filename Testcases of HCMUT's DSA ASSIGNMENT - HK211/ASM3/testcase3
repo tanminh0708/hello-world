@@ -61,3 +61,15 @@ CALL it('C','e3UQ')
 0
 0
 UnclosedBlock: 1
+---------------NEW TEST-------------
+DOUBLE 10 60
+INSERT o9
+INSERT fM 4
+END
+END
+INSERT veGupy 1
+CALL veGupy(o9)
+CALL fM('Sa',990,143,628)
+-----------EXPECTED
+0
+Overflow: INSERT fM 4
