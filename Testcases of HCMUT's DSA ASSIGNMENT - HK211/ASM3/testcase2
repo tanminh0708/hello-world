@@ -14,3 +14,16 @@ BEGIN
 Output:
 Undeclared: o_D
 THIS IS THE END.
+-------Newtest
+QUADRATIC 54 155 281
+INSERT jsnvmo
+INSERT v 1
+ASSIGN i v
+LOOKUP jsnvmo
+PRINT
+--------------expected
+Output:
+0
+0
+TypeMismatch: ASSIGN i v
+THIS IS THE END.
