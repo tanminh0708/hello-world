@@ -27,3 +27,16 @@ Output:
 0
 TypeMismatch: ASSIGN i v
 THIS IS THE END.
+------------NEW TEST--------------
+QUADRATIC 48 495 863
+BEGIN
+INSERT s
+LOOKUP s
+INSERT w
+INSERT w 1
+LOOKUP w
+BEGIN
+END
+CALL w()
+PRINT
+--------expected-------------
