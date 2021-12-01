@@ -52,3 +52,12 @@ Output:
 0
 Overflow: INSERT dIRi
 THIS IS THE END.
+------------NEW TEST----------------
+LINEAR 901 961
+INSERT it 2
+BEGIN
+CALL it('C','e3UQ')
+------------EXPECTED------------
+0
+0
+UnclosedBlock: 1
