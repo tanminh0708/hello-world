@@ -26,3 +26,29 @@ Output:
 0
 Undeclared: qf2xyg
 THIS IS THE END.
+--------------NEW TESTS
+Testcase 12333:
+QUADRATIC 10 615 865
+BEGIN
+INSERT fWi
+INSERT dIRi
+ASSIGN dIRi fWi
+CALL dIRi()
+INSERT tz 3
+LOOKUP dIRi
+PRINT
+BEGIN
+INSERT mB
+END
+END
+PRINT
+CALL mB()
+BEGIN
+PRINT
+END
+END
+------------EXPECTED
+Output:
+0
+Overflow: INSERT dIRi
+THIS IS THE END.
