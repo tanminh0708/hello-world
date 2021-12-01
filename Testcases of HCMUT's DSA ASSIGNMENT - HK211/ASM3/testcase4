@@ -18,3 +18,17 @@ Output:
 0
 InvalidDeclaration: xP
 THIS IS THE END.
+-------------NEW TEST
+Testcase 9999:
+DOUBLE 725 655
+INSERT y5GSsh
+ASSIGN y5GSsh y5GSsh
+INSERT eYTLu2
+ASSIGN y5GSsh eYTLu2
+BEGIN
+PRINT
+----------EXPECTED---------------
+Output:
+0
+TypeCannotBeInferred: ASSIGN y5GSsh y5GSsh
+THIS IS THE END.
