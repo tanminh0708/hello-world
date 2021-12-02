@@ -109,3 +109,28 @@ Output:
 4
 Redeclared: p
 THIS IS THE END.
+---------------------- NEW TEST--------------
+Testcase 15526:
+LINEAR 924 197
+INSERT w
+INSERT sKA 3
+BEGIN
+INSERT usW9C
+LOOKUP usW9C
+INSERT w 3
+END
+END
+LOOKUP w
+END
+LOOKUP sKA
+END
+LOOKUP usW9C
+PRINT
+----------------EXPECTED--------------
+Output:
+0
+0
+0
+567
+InvalidDeclaration: w
+THIS IS THE END.
