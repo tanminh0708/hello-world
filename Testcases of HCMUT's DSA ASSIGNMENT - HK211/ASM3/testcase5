@@ -38,3 +38,35 @@ Output:
 0
 Overflow: INSERT fM 4
 THIS IS THE END.
+-------------NEW TESTS------------------
+LINEAR 331 332
+INSERT dozjDu
+BEGIN
+BEGIN
+INSERT kjJMa3
+LOOKUP kjJMa3
+INSERT aqAYrK
+END
+END
+INSERT agwCo1
+INSERT wDmv
+END
+LOOKUP eEepb
+END
+INSERT uSD 4
+BEGIN
+BEGIN
+BEGIN
+LOOKUP dozjDu
+END
+
+/////////////
+expected:
+0
+0
+112
+0
+0
+0
+UnknownBlock
+THIS IS THE END.
