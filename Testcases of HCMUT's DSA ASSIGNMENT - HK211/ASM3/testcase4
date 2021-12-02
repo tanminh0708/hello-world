@@ -46,3 +46,22 @@ LOOKUP aS
 0
 37
 TypeMismatch: ASSIGN aS aS(aS,'z3pYJ')
+--------------NEW TEST --------------------
+LINEAR 19 1
+INSERT a1
+INSERT b2
+INSERT rj 2
+INSERT bj 3
+ASSIGN a1 1
+ASSIGN b2 'abc'
+ASSIGN a1 rj(a1,b2)
+ASSIGN bj rj
+-----------------EXPECTED-------------------
+0
+0
+1
+0
+0
+0
+1
+TypeMismatch: ASSIGN bj rj
