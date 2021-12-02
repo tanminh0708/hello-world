@@ -132,3 +132,14 @@ Output:
 0
 TypeMismatch: ASSIGN zOz8 zOz8('f',23)
 THIS IS THE END.
+-----------------NEW TEST---------------------
+QUADRATIC 22 509 138
+INSERT bdEa 3
+CALL bdEa('4x',438,'L')
+INSERT bdV
+ASSIGN bdEa bdEa(bdV,'lTp',632)
+----------------------------EXPECTED
+0
+0
+0
+TypeMismatch: ASSIGN bdEa bdEa(bdV,'lTp',632)
