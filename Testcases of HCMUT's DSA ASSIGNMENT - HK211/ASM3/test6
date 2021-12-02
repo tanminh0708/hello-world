@@ -78,3 +78,12 @@ Output:
 0
 Undeclared: urgnZW
 THIS IS THE END.
+-------------------NEW TEST
+DOUBLE 992 884
+INSERT kR 3
+INSERT nhY
+ASSIGN kR nhY
+------------EXPECTED---------------------
+0
+0
+TypeMismatch: ASSIGN kR nhY
