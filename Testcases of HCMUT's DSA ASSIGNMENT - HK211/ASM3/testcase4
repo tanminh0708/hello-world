@@ -32,3 +32,17 @@ Output:
 0
 TypeCannotBeInferred: ASSIGN y5GSsh y5GSsh
 THIS IS THE END.
+-------------NEW TEST------------------
+QUADRATIC 79 680 139
+INSERT aS 2
+BEGIN
+END
+LOOKUP aS
+ASSIGN aS aS(aS,'z3pYJ')
+BEGIN
+CALL sI()
+LOOKUP aS
+-----------------EXPECTED
+0
+37
+TypeMismatch: ASSIGN aS aS(aS,'z3pYJ')
