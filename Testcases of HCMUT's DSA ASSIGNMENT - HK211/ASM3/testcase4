@@ -65,3 +65,52 @@ ASSIGN bj rj
 0
 1
 TypeMismatch: ASSIGN bj rj
+-----------------NEW TESTS-----------------
+Testcase 75124:
+LINEAR 38 409
+INSERT ag43OU 3
+INSERT v 1
+CALL v(627)
+BEGIN
+LOOKUP v
+LOOKUP ag43OU
+INSERT vJwQ
+ASSIGN vJwQ v(445)
+----------------EXPECTED----------------
+0
+0
+0
+32
+7
+0
+TypeMismatch: ASSIGN vJwQ v(445)
+--------------------------------NEW TEST--------------------
+Testcase 305097:
+DOUBLE 846 212
+INSERT iM
+PRINT
+INSERT rvnsvN 1
+CALL rvnsvN('vSF')
+CALL rvnsvN(iM)
+ASSIGN iM iM
+END
+ASSIGN rvnsvN fH
+LOOKUP rvnsvN
+PRINT
+BEGIN
+INSERT qx1Le
+ASSIGN dIsIeB iM
+CALL iM()
+END
+PRINT
+PRINT
+-----------------EXPECTED-------------------
+Output:
+0
+653 iM//0
+0
+0
+0
+0
+UnknownBlock
+THIS IS THE END.
