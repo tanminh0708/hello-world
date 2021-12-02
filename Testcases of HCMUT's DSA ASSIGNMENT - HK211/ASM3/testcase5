@@ -33,6 +33,17 @@ END
 INSERT veGupy 1
 CALL veGupy(o9)
 CALL fM('Sa',990,143,628)
+-------------NEW TEST--------------
+QUADRATIC 22 509 138
+INSERT bdEa 3
+CALL bdEa('4x',438,'L')
+INSERT bdV
+ASSIGN bdEa bdEa(bdV,'lTp',632)
+-----------EXPECTED---------------
+0
+0
+0
+TypeMismatch: ASSIGN bdEa bdEa(bdV,'lTp',632)
 -----------------EXPECTED
 Output:
 0
