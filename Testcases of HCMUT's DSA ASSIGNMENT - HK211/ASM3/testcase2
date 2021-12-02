@@ -83,3 +83,29 @@ Output:
 0
 InvalidDeclaration: q
 THIS IS THE END.
+------------------NEW TEST----------------
+Testcase 49369:
+LINEAR 13 265
+INSERT a
+PRINT
+INSERT p
+BEGIN
+INSERT wPW8et
+BEGIN
+LOOKUP wPW8et
+INSERT p
+LOOKUP p
+BEGIN
+END
+INSERT p 4
+----------------EXPECTED---------------
+Output:
+0
+10 a//0
+0
+0
+3
+0
+4
+Redeclared: p
+THIS IS THE END.
