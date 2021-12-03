@@ -201,3 +201,80 @@ CALL y()
 0
 0
 Invalid: LOOKUP y 
+-------NEW TEST-------------
+DOUBLE 19 1
+INSERT x 2
+INSERT y 0
+INSERT begin 
+---------EXPECTED------------
+0
+0
+Invalid: INSERT begin 
+-------NEW TEST--------------
+DOUBLE 19 1
+INSERT x 2
+INSERT y 0
+INSERT begin
+ASSIGN begin 'begin' 
+-----------expected-----------
+0
+0
+0
+Invalid: ASSIGN begin 'begin' 
+--------NEW TEST-------------
+DOUBLE 19 1
+INSERT x 2
+INSERT y 0
+INSERT begin
+ASSIGN begin  'begin'
+-----------expected----------
+0
+0
+0
+Invalid: ASSIGN begin  'begin'
+--------------NEW TESTS------------
+DOUBLE 19 1
+INSERT x 2
+INSERT y 0
+INSERT begin
+ASSIGN  begin 'begin'
+------------EXPECTED-----------
+0
+0
+0
+Invalid: ASSIGN  begin 'begin'
+---------NEW TESTS------------
+DOUBLE 19 1
+INSERT x 2
+INSERT y 0
+INSERT begin
+ASSIGN x('nakhuong','CO 2011') 
+----------expected-------------
+0
+0
+0
+Invalid: ASSIGN x('nakhuong','CO 2011') 
+------------new tests----------------
+DOUBLE 19 1
+INSERT x 2
+INSERT y 0
+INSERT begin
+ASSIGN x ('nakhuong','CO 2011')
+------------expected---------------
+0
+0
+0
+Invalid: ASSIGN x ('nakhuong','CO 2011')
+------------new test-----------------
+DOUBLE 19 1
+INSERT x 2
+INSERT y
+INSERT begin
+ASSIGN y 97
+ASSIGN y x('nakhuong','CO 2011')
+---------------expected-------------
+0
+0
+0
+0
+0
