@@ -73,3 +73,23 @@ CALL fM('Sa',990,143,628)
 -----------EXPECTED
 0
 Overflow: INSERT fM 4
+--------------NEW TEST--------------------
+QUADRATIC 34 221 261
+INSERT jbB
+INSERT q 4
+PRINT
+BEGIN
+BEGIN
+INSERT k
+INSERT q
+END
+BEGIN
+BEGIN
+ASSIGN k q
+----------EXPECTED---------------
+0
+0
+14 jbB//0;31 q//0
+0
+0
+TypeMismatch: ASSIGN k q
