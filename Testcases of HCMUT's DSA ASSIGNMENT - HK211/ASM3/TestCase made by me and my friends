@@ -1,0 +1,158 @@
+LINEAR 19 1
+BEGIN
+INSERT ia
+BEGIN
+BEGIN
+BEGIN
+BEGIN
+BEGIN
+BEGIN
+BEGIN
+BEGIN
+BEGIN
+BEGIN
+BEGIN
+BEGIN
+BEGIN
+BEGIN
+INSERT z9
+PRINT
+--------EXPECTED
+0
+1
+17 ia//1;18 z9//15
+UnclosedBlock: 15
+-------------NEW TEST (HEHE BOY :)) ) ----------------
+DOUBLE 19 1
+INSERT foo 1
+CALL foo('test') 
+PRINT
+----------EXPECTED------------------
+0
+Invalid: CALL foo('test')
+--------------NEW TEST (CHƯA FIX TRONG CODE MÌNH) ------------------
+DOUBLE 19 1
+INSERT x 69
+INSERT y
+BEGIN
+PRINT
+PRINT
+INSERT z 
+END
+INSERT z 69
+------------EXPECTED------------
+0
+0
+15 x//0;16 y//0
+15 x//0;16 y//0
+Invalid: INSERT z 
+-----------NEW TEST --------------
+DOUBLE 19 1
+INSERT x 69
+INSERT y
+BEGIN 12 1
+PRINT
+PRINT
+INSERT z 
+END
+INSERT z 69
+--------------EXPECTED-------------
+0
+0
+Invalid: BEGIN 12 1
+-----------NEW TEST-------------------
+DOUBLE 19 1
+INSERT x 69
+INSERT y
+INSERT begin
+BEGIN
+INSERT z
+END 19 1
+------------EXPECTED-----------
+0
+0
+0
+0
+Invalid: END 19 1
+----------NEW TEST-------------
+DOUBLE 19 1
+INSERT x 69
+INSERT begin
+BEGIN
+LOOKUP x 69
+INSERT z
+PRINT
+END
+-----------EXPECTED--------------
+0
+0
+0
+Invalid: LOOKUP x 69
+--------NEW TEST----------
+DOUBLE 19 1
+INSERT x 69
+INSERT begin
+BEGIN
+INSERT x
+BEGIN
+INSERT x
+LOOKUP x 69
+BEGIN
+INSERT x
+---------------EXPECTED-------------
+0
+0
+1
+0
+Invalid: LOOKUP x 69
+---------------NEW TEST------------
+DOUBLE 19 1
+INSERT x 2
+INSERT y 0
+INSERT begin
+BEGIN
+ASSIGN begin 2002
+BEGIN
+ASSIGN begin x(20120,18)
+CALL y()
+BEGIN
+INSERT x
+-------------EXPECTED------------
+0
+0
+0
+0
+0
+0
+0
+UnclosedBlock: 3
+----------NEW TEST------------
+DOUBLE 19 1
+INSERT x 2
+INSERT y 0
+INSERT begin
+BEGIN 
+ASSIGN begin 'begin'
+PRINT
+END
+---------EXPECTED-------------
+0
+0
+0
+Invalid: BEGIN
+-------------NEW TEST--------------
+DOUBLE 19 1
+INSERT x 2
+INSERT y 0
+INSERT begin
+BEGIN
+ASSIGN begin 'begin'
+PRINT
+END 
+-----------EXPECTED-------------
+0
+0
+0
+0
+1 begin//0;15 x//0;16 y//0
+Invalid: END 
