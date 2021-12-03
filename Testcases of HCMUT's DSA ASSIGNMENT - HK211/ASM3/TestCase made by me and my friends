@@ -156,3 +156,48 @@ END
 0
 1 begin//0;15 x//0;16 y//0
 Invalid: END 
+-------------NEW TEST--------------
+DOUBLE 19 1
+INSERT x 2
+INSERT y 0
+INSERT begin
+BEGIN
+CALL
+PRINT begin
+END 19 12
+---------EXPECTED------------
+0
+0
+0
+Invalid: CALL
+---------------NEW TEST------------
+DOUBLE 19 1
+INSERT x 2
+INSERT y 0
+INSERT begin
+BEGIN
+CALL y()
+LOOKUP y
+PRINT y
+-------------EXPECTED-------------
+0
+0
+0
+0
+16
+Invalid: PRINT y
+-----------NEW TEST-----------
+DOUBLE 19 1
+INSERT x 2
+INSERT y 0
+INSERT begin
+BEGIN
+CALL y()
+LOOKUP y 
+CALL y() 
+----------EXPECTED-------------
+0
+0
+0
+0
+Invalid: LOOKUP y 
