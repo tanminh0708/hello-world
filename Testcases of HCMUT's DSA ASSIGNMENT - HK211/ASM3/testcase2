@@ -40,6 +40,10 @@ END
 CALL w()
 PRINT
 --------expected-------------
+0
+23
+0
+Redeclared: w
 ------------NEW TEST------------------
 Testcase 7482:
 DOUBLE 950 703
@@ -134,3 +138,47 @@ Output:
 567
 InvalidDeclaration: w
 THIS IS THE END.
+----------------NEW TEST---------------
+LINEAR 924 197
+INSERT w
+BEGIN
+INSERT w
+BEGIN
+INSERT w 3
+END
+END
+----------------EXPECTED -----------------
+0
+0
+InvalidDeclaration: w
+---------------NEW TEST--------------------
+LINEAR 924 197
+INSERT w
+BEGIN
+INSERT w
+INSERT w 3
+END
+END
+-----------------EXPECTED-------------
+0
+0
+Redeclared: w
+-------------NEW TEST---------------
+LINEAR 924 197
+INSERT w
+BEGIN
+INSERT w 3
+END
+END
+----------------EXPECTED---------------
+0
+InvalidDeclaration: w
+----------------NEW  TEST--------------
+LINEAR 924 197
+INSERT w
+INSERT w 3
+END
+END
+------------EXPECTED---------------
+0
+Redeclared: w
