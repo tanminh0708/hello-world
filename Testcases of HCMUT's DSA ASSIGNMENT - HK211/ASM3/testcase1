@@ -143,3 +143,14 @@ ASSIGN bdEa bdEa(bdV,'lTp',632)
 0
 0
 TypeMismatch: ASSIGN bdEa bdEa(bdV,'lTp',632)
+-------------------NEW TESTS----------
+QUADRATIC 86 938 516
+INSERT l 3
+LOOKUP l
+CALL l(550,309,667)
+ASSIGN zgQy1e l(105,71,867)
+-------------EXPECTED-----------
+0
+60
+0
+Undeclared: zgQy1e
