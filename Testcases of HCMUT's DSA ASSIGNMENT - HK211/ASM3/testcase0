@@ -133,3 +133,24 @@ Output:
 0
 Undeclared: uDe2
 THIS IS THE END.
+---------------NEW TEST--------------
+QUADRATIC 12 748 312
+INSERT jMw1_1
+INSERT x3x1Dp 1
+BEGIN
+ASSIGN x3x1Dp x3x1Dp(jMw1_1)
+INSERT au8of8
+BEGIN
+CALL jMw1_1()
+END
+CALL au8of8()
+LOOKUP au8of8
+ASSIGN jMw1_1 hX
+BEGIN
+CALL jMw1_1()
+--------------EXPECTED-------------
+Output:
+0
+0
+TypeCannotBeInferred: ASSIGN x3x1Dp x3x1Dp(jMw1_1)
+THIS IS THE END.
