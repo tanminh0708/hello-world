@@ -1,0 +1,26 @@
+Testcase 75:
+LINEAR 992 535
+INSERT m
+CALL m()
+LOOKUP m
+ASSIGN m m
+INSERT fm
+ASSIGN fm fm
+INSERT qhZ
+END
+INSERT p20Ep
+INSERT omjGp
+ASSIGN qhZ m
+PRINT
+CALL fm()
+ASSIGN m m
+PRINT
+ASSIGN fm fm
+END
+CALL fm()
+LOOKUP omjGp
+---------------expected-----------
+Output:
+0
+TypeMismatch: CALL m()
+THIS IS THE END.
