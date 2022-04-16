@@ -11,8 +11,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h> 
+#include <time.h> 
 /* Define and scope what needs to be seen by everyone */
-#define NUM_THREADS  3
+#define NUM_THREADS  25
 #define ITERATIONS 10
 #define THRESHOLD 12
 int count = 0;
@@ -20,7 +21,7 @@ double finalresult=0.0;
 pthread_mutex_t count_mutex;
 pthread_cond_t count_condvar;
 
-
+clock_t start,end; 
 void *sub1(void *t)
 {
   int i; 
@@ -38,15 +39,21 @@ void *sub1(void *t)
   work is now done within the mutex lock of count.
   */
   pthread_mutex_lock(&count_mutex);
-  printf("sub1: thread=%ld going into wait. count=%d\n",tid,count);
-  if (count == THRESHOLD) pthread_cond_wait(&count_condvar, &count_mutex);
-  printf("sub1: thread=%ld Condition variable signal received.",tid);
 
+  if (count < THRESHOLD) {
+  printf("sub1: thread=%ld going into wait. count=%d\n",tid,count);
+  printf("sub1: thread=%ld Condition variable signal received.",tid);
+  pthread_cond_wait(&count_condvar, &count_mutex);
   printf(" count=%d\n",count);
   count++;
   finalresult += myresult;
   printf("sub1: thread=%ld count now equals=%d myresult=%e. Done.\n",
          tid,count,myresult);
+  }
+  else {
+      printf("sub1: count=%d. Not as expected.",count); 
+      printf(" Probably missed signal. Skipping work and exiting.\n");
+   }
   pthread_mutex_unlock(&count_mutex);
   pthread_exit(NULL);
 }
@@ -85,11 +92,13 @@ void *sub2(void *t)
 
 int main(int argc, char *argv[])
 {
+srand(time(NULL)); 
+
   long t1=1, t2=2, t3=3;
   int i, rc;
-  pthread_t threads[3];
+  pthread_t threads[NUM_THREADS];
   pthread_attr_t attr;
-
+start = clock(); 
   /* Initialize mutex and condition variable objects */
   pthread_mutex_init(&count_mutex, NULL);
   pthread_cond_init (&count_condvar, NULL);
@@ -97,9 +106,10 @@ int main(int argc, char *argv[])
   /* For portability, explicitly create threads in a joinable state */
   pthread_attr_init(&attr);
   pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
-  pthread_create(&threads[0], &attr, sub1, (void *)t1);
-  pthread_create(&threads[1], &attr, sub2, (void *)t2);
-  pthread_create(&threads[2], &attr, sub2, (void *)t3);
+    pthread_create(&threads[0], &attr, sub1, (void *)t1);
+  for ( i = 1; i  < NUM_THREADS; i++)
+  pthread_create(&threads[i], &attr, sub2, (void *)i);
+  //pthread_create(&threads[2], &attr, sub2, (void *)i);
 
   /* Wait for all threads to complete */
   for (i = 0; i < NUM_THREADS; i++) {
@@ -107,7 +117,9 @@ int main(int argc, char *argv[])
   }
   printf ("Main(): Waited on %d threads. Final result=%e. Done.\n",
           NUM_THREADS,finalresult);
-
+  end = clock(); 
+    	    	double exe_time = ((double)(end - start)) / ( (double)(CLOCKS_PER_SEC) ); 
+    	printf("Time: %g seconds\n", exe_time);
   /* Clean up and exit */
   pthread_attr_destroy(&attr);
   pthread_mutex_destroy(&count_mutex);
